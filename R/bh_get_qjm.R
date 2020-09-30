@@ -30,11 +30,11 @@ bh_get_qjm <- function (year,sleep)  {
 
   get_data_month=function(table_month,Month){
     table_month %>%
-      html_nodes("tr") %>%
+      rvest::html_nodes("tr") %>%
       .[1] %>%
-      html_nodes("table") %>%
+      rvest::html_nodes("table") %>%
       purrr::map_df(html_table) %>%
-      mutate(Month=rep(Month,length(X1)),
+      dplyr::mutate(Month=rep(Month,length(X1)),
              Day=X1,
              Qj=X2,
              Val=X3)
@@ -45,10 +45,11 @@ bh_get_qjm <- function (year,sleep)  {
     html_node("table") %>%
     .[3:14] %>%
     purrr::map2_df(1:12,get_data_month) %>%
-    mutate(Year=rep(year,n())) %>%
-    mutate(Date=lubridate::make_date(Year,Month,Day)) %>%
-    select(Date,Qj,Val) %>%
-    mutate(Val=case_when(Val==""~NA_character_,
-                         Val!=""~Val))
+    dplyr::mutate(Year=rep(year,n())) %>%
+    dplyr::mutate(Date=lubridate::make_date(Year,Month,Day)) %>%
+    dplyr::select(Date,Qj,Val) %>%
+    dplyr::mutate(Val=case_when(Val==""~NA_character_,
+                         Val!=""~Val)) %>%
+    dplyr::as_tibble()
   return(data_year)
 }

@@ -48,6 +48,11 @@ bh_get_qtvar <- function (t1, t2)  {
     )
     df[,"Date"] = as.POSIXct(df[,"Date"], format = "%d/%m/%Y %H:%M", tz = "UTC")
   }
-
+  df=df %>%
+    dplyr::mutate(Q=`Q (m3/s)`) %>%
+    dplyr::mutate(Q=as.numeric(Q)) %>%
+    dplyr::mutate(Date=lubridate::ymd_hms(Date))
+    dplyr::select(Date,Q,V,C) %>%
+    dplyr::as_tibble()
   return(df)
 }
