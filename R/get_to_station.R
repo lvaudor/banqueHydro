@@ -19,7 +19,7 @@ get_to_station <- function (station) {
   )
   form0[["station[]"]] = station
   url.selection = paste(url,"selection.php", sep = "/")
-  res <- POST(
+  res <- httr::POST(
     url.selection,
     body = form0, encode = "form", verbose()
   )

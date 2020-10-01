@@ -26,7 +26,7 @@ get_to_qtvar <- function (station,t1, t2)  {
     btnValider = "Valider"
   )
 
-  res <- POST(
+  res <- httr::POST(
     url.procedure,
     body = form2,
     encode = "form",
