@@ -2,21 +2,22 @@
 % Please edit documentation in R/bh_get_qjm.R
 \name{bh_get_qjm}
 \alias{bh_get_qjm}
-\title{Used from bh_get to get QJM data}
+\title{get QJM data for a station between two times t1 and t2}
 \usage{
-bh_get_qjm(year, sleep)
+bh_get_qjm(station, t1, t2)
 }
 \arguments{
-\item{year}{the year for which the data is collected}
+\item{station}{station code}
 
-\item{sleep}{how much time the system waits between two GET requests (in seconds)}
-}
-\value{
-QJM for year `year`
+\item{t1}{Beginning year}
+
+\item{t2}{Ending year}
 }
 \description{
-This is used from bh_get to get QJM data between two times.
+This is used to get QJM data between two years t1 and t2.
 }
 \examples{
-df_ts<-bh_get_qjm(year="2018", sleep=1)
+df_ts<-bh_get_qtvar(station="V2942010",
+                    t1=2008,
+                    t2=2010)
 }

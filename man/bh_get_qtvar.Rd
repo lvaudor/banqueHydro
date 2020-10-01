@@ -2,21 +2,22 @@
 % Please edit documentation in R/bh_get_qtvar.R
 \name{bh_get_qtvar}
 \alias{bh_get_qtvar}
-\title{Used from bh_get to get QTVAR data}
+\title{get QTVAR data for a station between two times t1 and t2}
 \usage{
-bh_get_qtvar(t1, t2)
+bh_get_qtvar(station, t1, t2)
 }
 \arguments{
+\item{station}{station code}
+
 \item{t1}{Date de début d'événement au format "%j/%M/%Y %h:%m"}
 
 \item{t2}{Date de fin d'événement au format "%j/%M/%Y %h:%m"}
-}
-\value{
-dataframe contenant le tableau produit sur la page de visualisation de la chronique de la banque hydro
 }
 \description{
 This is used to get QTVAR data between two times.
 }
 \examples{
-df_qtvar<-bh_get_qtvar("16/03/2017 00:00", "05/04/2017 23:59")
+df_ts<-bh_get_qtvar(station="V2942010",
+                    t1="05/02/2015 15:00",
+                    t2="06/02/2015 18:00")
 }
