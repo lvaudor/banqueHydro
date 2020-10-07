@@ -13,7 +13,9 @@ get_to_procedure=function(procedure,station){
     form1[["station[]"]] =  station
     res <- httr::POST(
       url.procedure,
-      body = form1, encode = "form", verbose()
+      body = form1,
+      encode = "form"#,
+      #httr::verbose()
     )
 return(res)
 }

@@ -2,7 +2,10 @@
 #' @param res response page
 #' @param year year
 collect_qjm <- function (res,year)  {
-  pageToRead=content(res, "text", encoding = "ISO-8859-1", type="html")
+  pageToRead=httr::content(res,
+                           "text",
+                           encoding = "ISO-8859-1",
+                           type="html")
   doc=xml2::read_html(pageToRead)
 
   get_data_month=function(table_month,which_month){

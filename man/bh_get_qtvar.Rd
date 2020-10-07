@@ -17,7 +17,7 @@ bh_get_qtvar(station, t1, t2)
 This is used to get QTVAR data between two times.
 }
 \examples{
-df_ts<-bh_get_qtvar(station="V2942010",
-                    t1="05/02/2015 15:00",
-                    t2="06/02/2015 18:00")
+df_qtvar<-bh_get_qtvar(station="V2942010",
+                       t1="05/02/2015 15:00",
+                       t2="06/02/2015 18:00")
 }

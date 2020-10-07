@@ -1,5 +1,5 @@
-#'#' @description This is used to get QTVAR data between two times.
-#' @param year
+#' @description This is used to get QTVAR data between two times.
+#' @param year year for which data should be collected
 
 get_to_qjm=function(year){
     url="http://www.hydro.eaufrance.fr"
@@ -14,8 +14,8 @@ get_to_qjm=function(year){
     res <- httr::POST(
       url.procedure,
       body = form2,
-      encode = "form",
-      verbose()
+      encode = "form"#,
+      #httr::verbose()
     )
     return(res)
 }

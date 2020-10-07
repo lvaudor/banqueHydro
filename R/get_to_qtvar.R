@@ -1,6 +1,6 @@
 #' Used from bh_get to get QTVAR data
 #' @description This is used to get QTVAR data between two times.
-#' @param station
+#' @param station gauging station
 #' @param t1 Date de début d'événement au format "%j/%M/%Y %h:%m"
 #' @param t2 Date de fin d'événement au format "%j/%M/%Y %h:%m"
 #'
@@ -29,8 +29,8 @@ get_to_qtvar <- function (station,t1, t2)  {
   res <- httr::POST(
     url.procedure,
     body = form2,
-    encode = "form",
-    verbose()
+    encode = "form"#,
+    #httr::verbose()
   )
   return(res)
 }

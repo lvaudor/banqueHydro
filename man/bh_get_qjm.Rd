@@ -17,7 +17,7 @@ bh_get_qjm(station, t1, t2)
 This is used to get QJM data between two years t1 and t2.
 }
 \examples{
-df_ts<-bh_get_qtvar(station="V2942010",
-                    t1=2008,
-                    t2=2010)
+df_qjm<-bh_get_qjm(station="V2942010",
+                   t1=2008,
+                   t2=2010)
 }
