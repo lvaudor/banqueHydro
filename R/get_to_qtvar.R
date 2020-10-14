@@ -1,8 +1,8 @@
 #' Used from bh_get to get QTVAR data
 #' @description This is used to get QTVAR data between two times.
 #' @param station gauging station
-#' @param t1 Date de debut d'evenement au format "j/M/Y h:m"
-#' @param t2 Date de fin d'evenement au format "j/M/Y h:m"
+#' @param t1 starting date formatted "\\%j/\\%M/\\%Y \\%h:\\%m"
+#' @param t2 Date de fin d'evenement au format "\\%j/\\%M/\\%Y \\%h:\\%m"
 #'
 #' @return dataframe contenant le tableau produit sur la page de visualisation de la chronique de la banque hydro
 #'

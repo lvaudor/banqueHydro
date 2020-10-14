@@ -9,9 +9,9 @@ get_to_qtvar(station, t1, t2)
 \arguments{
 \item{station}{gauging station}
 
-\item{t1}{Date de debut d'evenement au format "j/M/Y h:m"}
+\item{t1}{starting date formatted "\\%j/\\%M/\\%Y \\%h:\\%m"}
 
-\item{t2}{Date de fin d'evenement au format "j/M/Y h:m"}
+\item{t2}{Date de fin d'evenement au format "\\%j/\\%M/\\%Y \\%h:\\%m"}
 }
 \value{
 dataframe contenant le tableau produit sur la page de visualisation de la chronique de la banque hydro
