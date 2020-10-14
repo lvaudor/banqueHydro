@@ -9,9 +9,9 @@ bh_get_qtvar(station, t1, t2)
 \arguments{
 \item{station}{station code}
 
-\item{t1}{Date de début d'événement au format "%j/%M/%Y %h:%m"}
+\item{t1}{Date de début d'evenement au format "j/M/Y h:m"}
 
-\item{t2}{Date de fin d'événement au format "%j/%M/%Y %h:%m"}
+\item{t2}{Date de fin d'evenement au format "j/M/Y h:m"}
 }
 \description{
 This is used to get QTVAR data between two times.
