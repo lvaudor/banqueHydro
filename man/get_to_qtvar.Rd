@@ -2,23 +2,20 @@
 % Please edit documentation in R/get_to_qtvar.R
 \name{get_to_qtvar}
 \alias{get_to_qtvar}
-\title{Used from bh_get to get QTVAR data}
+\title{get_to_qtvar}
 \usage{
 get_to_qtvar(station, t1, t2)
 }
 \arguments{
-\item{station}{gauging station}
+\item{station}{gauging station code}
 
-\item{t1}{starting date formatted "\%j/\%M/\%Y \%h:\%m"}
+\item{t1}{starting time formatted as "\%j/\%M/\%Y \%h:\%m"}
 
-\item{t2}{Date de fin d'evenement au format "\%j/\%M/\%Y \%h:\%m"}
+\item{t2}{ending time formatted as "\%j/\%M/\%Y \%h:\%m"}
 }
 \value{
-dataframe contenant le tableau produit sur la page de visualisation de la chronique de la banque hydro
+page with dataframe of qtvar for station between t1 and t2 as visualized on banquehydro
 }
 \description{
-This is used to get QTVAR data between two times.
-}
-\examples{
-df_qtvar<-bh_get_qtvar("16/03/2017 00:00", "18/03/2017 23:59")
+This function is used by bh_get_qtvar() to get page of results for QTVAR
 }

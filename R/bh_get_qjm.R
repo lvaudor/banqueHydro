@@ -1,9 +1,10 @@
-#' get QJM data for a station between two times t1 and t2
+#' Get QJM data for a station between two times t1 and t2
 #' @description This is used to get QJM data between two years t1 and t2.
 #' @export
 #' @param station station code
 #' @param t1 Beginning year
 #' @param t2 Ending year
+#' @return tibble with QJM data
 #' @examples
 #' df_qjm<-bh_get_qjm(station="V2942010",
 #'                    t1=2008,

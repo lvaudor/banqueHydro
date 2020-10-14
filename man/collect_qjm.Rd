@@ -2,7 +2,7 @@
 % Please edit documentation in R/collect_qjm.R
 \name{collect_qjm}
 \alias{collect_qjm}
-\title{collect QTVAR data from response page, for a given year}
+\title{collect_qjm}
 \usage{
 collect_qjm(res, year)
 }
@@ -11,6 +11,9 @@ collect_qjm(res, year)
 
 \item{year}{year}
 }
+\value{
+QJM data corresponding to year
+}
 \description{
-collect QTVAR data from response page, for a given year
+collect_qjm
 }

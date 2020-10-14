@@ -1,13 +1,9 @@
-#' Used from bh_get to get QTVAR data
-#' @description This is used to get QTVAR data between two times.
-#' @param station gauging station
-#' @param t1 starting date formatted "\%j/\%M/\%Y \%h:\%m"
-#' @param t2 Date de fin d'evenement au format "\%j/\%M/\%Y \%h:\%m"
-#'
-#' @return dataframe contenant le tableau produit sur la page de visualisation de la chronique de la banque hydro
-#'
-#' @examples
-#' df_qtvar<-bh_get_qtvar("16/03/2017 00:00", "18/03/2017 23:59")
+#' get_to_qtvar
+#' @description This function is used by bh_get_qtvar() to get page of results for QTVAR
+#' @param station gauging station code
+#' @param t1 starting time formatted as "\%j/\%M/\%Y \%h:\%m"
+#' @param t2 ending time formatted as "\%j/\%M/\%Y \%h:\%m"
+#' @return page with dataframe of qtvar for station between t1 and t2 as visualized on banquehydro
 get_to_qtvar <- function (station,t1, t2)  {
   url="http://www.hydro.eaufrance.fr"
   url.procedure = paste(url,"presentation/procedure.php", sep = "/")

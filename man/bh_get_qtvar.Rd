@@ -2,16 +2,19 @@
 % Please edit documentation in R/bh_get_qtvar.R
 \name{bh_get_qtvar}
 \alias{bh_get_qtvar}
-\title{get QTVAR data for a station between two times t1 and t2}
+\title{Get QTVAR data for a station between two times t1 and t2}
 \usage{
 bh_get_qtvar(station, t1, t2)
 }
 \arguments{
 \item{station}{station code}
 
-\item{t1}{Date de début d'evenement au format "j/M/Y h:m"}
+\item{t1}{starting time formatted as "\%j/\%M/\%Y \%h:\%m"}
 
-\item{t2}{Date de fin d'evenement au format "j/M/Y h:m"}
+\item{t2}{ending time formatted as "\%j/\%M/\%Y \%h:\%m"}
+}
+\value{
+tibble with QTVAR data
 }
 \description{
 This is used to get QTVAR data between two times.

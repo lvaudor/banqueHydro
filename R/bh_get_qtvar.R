@@ -1,9 +1,10 @@
-#' get QTVAR data for a station between two times t1 and t2
+#' Get QTVAR data for a station between two times t1 and t2
 #' @export
 #' @description This is used to get QTVAR data between two times.
 #' @param station station code
-#' @param t1 Date de début d'evenement au format "j/M/Y h:m"
-#' @param t2 Date de fin d'evenement au format "j/M/Y h:m"
+#' @param t1 starting time formatted as "\%j/\%M/\%Y \%h:\%m"
+#' @param t2 ending time formatted as "\%j/\%M/\%Y \%h:\%m"
+#' @return tibble with QTVAR data
 #' @examples
 #' df_qtvar<-bh_get_qtvar(station="V2942010",
 #'                        t1="05/02/2015 15:00",

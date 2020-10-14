@@ -1,6 +1,7 @@
-#' @param procedure procedure à importer : au choix pour l'instant "QTVAR","QJM" (QTVAR par défaut)
-#' @param station station code
-#' @return
+#' get_to_procdure
+#' @param procedure procedure: import either "QTVAR" or "QJM"
+#' @param station gauging station code
+#' @return page corresponding to procedure and station
 
 
 get_to_procedure=function(procedure,station){

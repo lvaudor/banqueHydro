@@ -1,5 +1,7 @@
-#' @description This is used to get QTVAR data between two times.
+#' get_to_qjm
+#' @description This function is used by bh_get_qjm() to get page of results for QJM
 #' @param year year for which data should be collected
+#' @return page with dataframe of QJM for specified year as visualised on banquehydro
 
 get_to_qjm=function(year){
     url="http://www.hydro.eaufrance.fr"

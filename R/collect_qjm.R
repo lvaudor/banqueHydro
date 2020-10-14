@@ -1,6 +1,8 @@
-#' collect QTVAR data from response page, for a given year
+#' collect_qjm
 #' @param res response page
 #' @param year year
+#' @return QJM data corresponding to year
+
 collect_qjm <- function (res,year)  {
   pageToRead=httr::content(res,
                            "text",

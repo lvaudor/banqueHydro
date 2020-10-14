@@ -1,5 +1,6 @@
-#' @param station station code
-#' @return
+#' get_to_station
+#' @param station gauging station code
+#' @return page corresponding to station on banquehydro
 
 
 get_to_station <- function (station) {

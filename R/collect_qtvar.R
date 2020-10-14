@@ -1,5 +1,7 @@
-#' collect QTVAR data from response page
+#' collect_qtvar
 #' @param res response page
+#' @return QTVAR data corresponding to page
+
 collect_qtvar <- function (res)  {
   pageToRead=httr::content(res,
                            "text",

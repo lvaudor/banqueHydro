@@ -2,13 +2,16 @@
 % Please edit documentation in R/collect_qtvar.R
 \name{collect_qtvar}
 \alias{collect_qtvar}
-\title{collect QTVAR data from response page}
+\title{collect_qtvar}
 \usage{
 collect_qtvar(res)
 }
 \arguments{
 \item{res}{response page}
 }
+\value{
+QTVAR data corresponding to page
+}
 \description{
-collect QTVAR data from response page
+collect_qtvar
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/bh_get_qjm.R
 \name{bh_get_qjm}
 \alias{bh_get_qjm}
-\title{get QJM data for a station between two times t1 and t2}
+\title{Get QJM data for a station between two times t1 and t2}
 \usage{
 bh_get_qjm(station, t1, t2)
 }
@@ -12,6 +12,9 @@ bh_get_qjm(station, t1, t2)
 \item{t1}{Beginning year}
 
 \item{t2}{Ending year}
+}
+\value{
+tibble with QJM data
 }
 \description{
 This is used to get QJM data between two years t1 and t2.
