@@ -1,10 +1,10 @@
 #' get_to_qtvar
 #' @description This function is used by bh_get_qtvar() to get page of results for QTVAR
-#' @param station gauging station code
+#' @param res page
 #' @param t1 starting time formatted as "\%j/\%M/\%Y \%h:\%m"
 #' @param t2 ending time formatted as "\%j/\%M/\%Y \%h:\%m"
 #' @return page with dataframe of qtvar for station between t1 and t2 as visualized on banquehydro
-get_to_qtvar <- function (station,t1, t2)  {
+get_to_qtvar <- function (res,t1, t2)  {
   url="http://www.hydro.eaufrance.fr"
   url.procedure = paste(url,"presentation/procedure.php", sep = "/")
   t1 = as.POSIXct(t1, format = "%d/%m/%Y %H:%M", tz = "UTC")

@@ -1,9 +1,10 @@
 #' get_to_qjm
 #' @description This function is used by bh_get_qjm() to get page of results for QJM
+#' @param res page
 #' @param year year for which data should be collected
 #' @return page with dataframe of QJM for specified year as visualised on banquehydro
 
-get_to_qjm=function(year){
+get_to_qjm=function(res,year){
     url="http://www.hydro.eaufrance.fr"
     url.procedure = paste(url,"presentation/procedure.php", sep = "/")
     # Formulaire de sélection de la date

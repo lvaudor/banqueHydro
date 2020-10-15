@@ -4,7 +4,7 @@
 \alias{bh_get_qjm}
 \title{Get QJM data for a station between two times t1 and t2}
 \usage{
-bh_get_qjm(station, t1, t2)
+bh_get_qjm(station, t1, t2, verbose = TRUE)
 }
 \arguments{
 \item{station}{station code}
@@ -12,6 +12,10 @@ bh_get_qjm(station, t1, t2)
 \item{t1}{Beginning year}
 
 \item{t2}{Ending year}
+
+\item{verbose}{whether to progressively print what data is being collected. Defaults to TRUE.}
+
+\item{sleep}{time to wait between two successive GET requests. Defaults to 30 seconds.}
 }
 \value{
 tibble with QJM data

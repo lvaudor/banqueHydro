@@ -4,9 +4,11 @@
 \alias{get_to_qjm}
 \title{get_to_qjm}
 \usage{
-get_to_qjm(year)
+get_to_qjm(res, year)
 }
 \arguments{
+\item{res}{page}
+
 \item{year}{year for which data should be collected}
 }
 \value{

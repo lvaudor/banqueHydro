@@ -4,14 +4,18 @@
 \alias{bh_get_qtvar}
 \title{Get QTVAR data for a station between two times t1 and t2}
 \usage{
-bh_get_qtvar(station, t1, t2)
+bh_get_qtvar(station, t1, t2, verbose = TRUE, sleep = 30)
 }
 \arguments{
 \item{station}{station code}
 
-\item{t1}{starting time formatted as "\%j/\%M/\%Y \%h:\%m"}
+\item{t1}{starting time formatted as "\%d/\%M/\%Y \%h:\%m"}
 
-\item{t2}{ending time formatted as "\%j/\%M/\%Y \%h:\%m"}
+\item{t2}{ending time formatted as "\%d/\%M/\%Y \%h:\%m"}
+
+\item{verbose}{whether to progressively print what data is being collected. Defaults to TRUE.}
+
+\item{sleep}{time to wait between two successive GET requests. Defaults to 30 seconds.}
 }
 \value{
 tibble with QTVAR data
@@ -21,6 +25,6 @@ This is used to get QTVAR data between two times.
 }
 \examples{
 df_qtvar<-bh_get_qtvar(station="V2942010",
-                       t1="05/02/2015 15:00",
-                       t2="06/02/2015 18:00")
+                       t1="05/02/2007 15:00",
+                       t2="08/04/2009 18:00")
 }

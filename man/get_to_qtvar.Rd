@@ -4,10 +4,10 @@
 \alias{get_to_qtvar}
 \title{get_to_qtvar}
 \usage{
-get_to_qtvar(station, t1, t2)
+get_to_qtvar(res, t1, t2)
 }
 \arguments{
-\item{station}{gauging station code}
+\item{res}{page}
 
 \item{t1}{starting time formatted as "\%j/\%M/\%Y \%h:\%m"}
 
