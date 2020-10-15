@@ -18,8 +18,8 @@ bh_get_qtvar <- function (station,t1,t2, verbose=TRUE, sleep=30)  {
   t2=lubridate::dmy_hm(t2)
   diffyears=as.numeric(difftime(t2,t1,units="days")/365.25)
   seqdates=c(seq(t1,t2, by = '1 year'),t2) %>% as.character(format="%d/%m/%Y %H:%M")
-  tibdates=tibble(t1=seqdates,
-                  t2=lead(seqdates,1)) %>%
+  tibdates=tibble::tibble(t1=seqdates,
+                          t2=dplyr::lead(seqdates,1)) %>%
     na.omit()
   df=NULL
   for (i in 1:nrow(tibdates)){
