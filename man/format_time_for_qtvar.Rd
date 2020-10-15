@@ -2,7 +2,7 @@
 % Please edit documentation in R/format_time_for_qtvar.R
 \name{format_time_for_qtvar}
 \alias{format_time_for_qtvar}
-\title{Format time to be formatted as banqueHydro expects for QTVAR ("%d/%m/%Y %H:%M")}
+\title{Format time to be formatted as banqueHydro expects for QTVAR ("\%d/\%m/\%Y \%H:\%M")}
 \usage{
 format_time_for_qtvar(mytime)
 }
@@ -13,5 +13,5 @@ format_time_for_qtvar(mytime)
 time in format "%d/%m/%Y %H:%M"
 }
 \description{
-Format time to be formatted as banqueHydro expects for QTVAR ("%d/%m/%Y %H:%M")
+Format time to be formatted as banqueHydro expects for QTVAR ("\%d/\%m/\%Y \%H:\%M")
 }
