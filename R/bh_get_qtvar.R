@@ -36,7 +36,7 @@ bh_get_qtvar <- function (station,t1,t2, verbose=TRUE, sleep=30)  {
       dplyr::select(station,Time, dplyr::everything())
     df=df %>%
       dplyr::bind_rows(df_tmp)
-
   }
+  df=unique(df)
   return(df)
 }

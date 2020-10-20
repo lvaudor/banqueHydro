@@ -27,5 +27,6 @@ bh_get_qjm <- function (station,t1,t2,verbose=TRUE)  {
     df=df %>%
       bind_rows(df_tmp)
   }
+  df=unique(df)
   return(df)
 }
