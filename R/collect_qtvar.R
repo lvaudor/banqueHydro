@@ -19,5 +19,6 @@ collect_qtvar <- function (res)  {
            Q=`Q (m3/s)`,
            V=V,
            C=C) %>%
-    dplyr::select(Time,Q,V,C)
+    dplyr::select(Time,Q)
+  return(df)
 }
