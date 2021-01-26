@@ -12,18 +12,26 @@
 #'                    t1=2008,
 #'                    t2=2010)
 bh_get_qjm <- function (station,t1,t2,verbose=TRUE)  {
-  res=get_to_station(station) %>%
-      get_to_procedure("QJM",station)
   seqyears=as.numeric(t1):as.numeric(t2)
   df=NULL
   for (i in 1:length(seqyears)){
-    if(i>1){Sys.sleep(sleep)}
     if(verbose==TRUE){print(paste0("Collecting QJM data for year ",
                                   seqyears[i],"."))}
-    res_tmp=get_to_qjm(res, year=seqyears[i])
-    df_tmp=collect_qjm(res_tmp, year=seqyears[i]) %>%
-     dplyr::mutate(station=rep(station,dplyr::n())) %>%
-     dplyr::select(station,Date, dplyr::everything())
+    res_tmp=banqueHydro:::get_to_station(station)
+
+    Sys.sleep(10)
+    res_tmp=res_tmp %>%
+      banqueHydro:::get_to_procedure("QJM",station)
+
+    Sys.sleep(10)
+    res_tmp=res_tmp %>%
+      banqueHydro:::get_to_qjm(year=seqyears[i])
+
+    Sys.sleep(10)
+    df_tmp=res_tmp %>%
+      banqueHydro:::collect_qjm(year=seqyears[i]) %>%
+      dplyr::mutate(station=rep(station,dplyr::n())) %>%
+      dplyr::select(station,Date, dplyr::everything())
     df=df %>%
       bind_rows(df_tmp)
   }
