@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_to_station.R
 \name{get_to_station}
 \alias{get_to_station}
-\title{get_to_station}
+\title{get_to_station from webpage}
 \usage{
 get_to_station(station)
 }
@@ -13,5 +13,5 @@ get_to_station(station)
 page corresponding to station on banquehydro
 }
 \description{
-get_to_station
+get_to_station from webpage
 }

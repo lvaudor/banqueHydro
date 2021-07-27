@@ -4,7 +4,7 @@
 \alias{bh_get_qjm}
 \title{Get QJM data for a station between two times t1 and t2}
 \usage{
-bh_get_qjm(station, t1, t2, verbose = TRUE)
+bh_get_qjm(station, t1, t2, verbose = TRUE, sleep = 10)
 }
 \arguments{
 \item{station}{station code}
@@ -26,5 +26,5 @@ This is used to get QJM data between two years t1 and t2.
 \examples{
 df_qjm<-bh_get_qjm(station="V2942010",
                    t1=2008,
-                   t2=2010)
+                   t2=2009)
 }

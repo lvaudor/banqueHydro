@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_to_qtvar.R
 \name{get_to_qtvar}
 \alias{get_to_qtvar}
-\title{get_to_qtvar}
+\title{get_to_qtvar from webpage}
 \usage{
 get_to_qtvar(res, t1, t2)
 }

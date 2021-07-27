@@ -4,7 +4,7 @@
 \alias{bh_get_qtvar}
 \title{Get QTVAR data for a station between two times t1 and t2}
 \usage{
-bh_get_qtvar(station, t1, t2, verbose = TRUE, sleep = 30)
+bh_get_qtvar(station, t1, t2, verbose = TRUE, sleep = 10)
 }
 \arguments{
 \item{station}{station code}

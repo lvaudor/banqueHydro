@@ -2,7 +2,7 @@
 % Please edit documentation in R/collect_qjm.R
 \name{collect_qjm}
 \alias{collect_qjm}
-\title{collect_qjm}
+\title{collect_qjm from webpage}
 \usage{
 collect_qjm(res, year)
 }
@@ -15,5 +15,5 @@ collect_qjm(res, year)
 QJM data corresponding to year
 }
 \description{
-collect_qjm
+collect_qjm from webpage
 }

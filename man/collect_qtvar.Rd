@@ -2,7 +2,7 @@
 % Please edit documentation in R/collect_qtvar.R
 \name{collect_qtvar}
 \alias{collect_qtvar}
-\title{collect_qtvar}
+\title{collect_qtvar from webpage}
 \usage{
 collect_qtvar(res)
 }
@@ -13,5 +13,5 @@ collect_qtvar(res)
 QTVAR data corresponding to page
 }
 \description{
-collect_qtvar
+collect_qtvar from webpage
 }

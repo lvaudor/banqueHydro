@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_to_qjm.R
 \name{get_to_qjm}
 \alias{get_to_qjm}
-\title{get_to_qjm}
+\title{get_to_qjm webpage}
 \usage{
 get_to_qjm(res, year)
 }
