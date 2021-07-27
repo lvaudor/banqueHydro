@@ -1,7 +1,12 @@
 # banqueHydro
 
-This package uses the banque hydro website to collect discharge data from gauging stations throughout France.
-It uses scraping techniques to collect QJM and QTVAR data.
+This package uses the banque hydro website to collect **historic discharge data** from **gauging stations throughout France**.
+
+The website providing the data and documentation is [http://www.hydro.eaufrance.fr/](http://www.hydro.eaufrance.fr/).
+
+Although there is an [API to collect real-time discharge data](https://hubeau.eaufrance.fr/page/api-hydrometrie), the historic data is only downloadable for now as unconviently-formatted .csv files, and for registered users only. 
+
+The `banqueHydro` package aims at providing this historic discharge data in a more convenient, API-like way, although it relies on web-scraping techniques. Please be aware that web-scraping is a resource-consuming process and that one should refrain from submitting very demanding or unnecessary/redundant queries. 
 
 Install it through:
 
@@ -9,26 +14,8 @@ Install it through:
 remotes::install_github("lvaudor/banqueHydro")
 ```
 
-The two main functions are:
+Documentation
 
-- bh_get_qtvar() (measures of discharge at varying time intervals)
-- bh_get_qjm() (mean daily discharge)
-
-The can be used this way:
-
-```{r}
-df_qtvar <- bh_get_qtvar(station="V2942010",
-                         t1="05/02/2007 15:00",
-                         t2="08/04/2007 18:00")
-```
-
-```{r}
-df_qjm <- bh_get_qjm(station="V2942010",
-                     t1=2008,
-                     t2=2009)
-```
-
-This can be quite a long process (a few minutes for each of the commands above) so make sure to save the resulting table!
-
+You can access the documentation regarding package riverbed on [this site](http://perso.ens-lyon.fr/lise.vaudor/Rpackages/banqueHydro/)
 
 
