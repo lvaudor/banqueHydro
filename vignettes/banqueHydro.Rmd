@@ -1,0 +1,65 @@
+---
+title: "banqueHydro"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{banqueHydro}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(banqueHydro)
+```
+
+
+The two main functions of package `banqueHydro` are:
+
+- `bh_get_qtvar()` (collects measures of discharge at varying time intervals)
+- `bh_get_qjm()` (collects mean daily discharge)
+
+Their main arguments correspond to **station code** and **starting (t1) and ending (t2) dates**.
+
+The **station codes** can be explored [here](http://www.hydro.eaufrance.fr/selection.php?consulte=rechercher).
+
+For **QTVAR** (measures at varying time intervals), t1 and t2 correspond to date-time formatted as "dd/MM/year HH:mm":
+
+```{r}
+df_qtvar <- bh_get_qtvar(station="V2942010",
+                         t1="05/02/2007 15:00",
+                         t2="08/04/2007 18:00")
+
+df_qtvar[1:10,]
+```
+
+
+For **QJM** (mean daily measures), t1 and t2 correspond to starting and ending years:
+
+```{r}
+df_qjm <- bh_get_qjm(station="V2942010",
+                     t1=2008,
+                     t2=2010)
+df_qjm[1:10,]
+```
+
+Please be aware that web-scraping is a **resource-consuming process** and that one should refrain from submitting very demanding or unnecessary/redundant queries. The functions of package `banqueHydro` include by default delays to ensure that the queries do not overload the banqueHydro servers. Due to these safeguards, the completion of the requests above can take quite a long time (a few minutes for each of the commands above). Hence, you should **make sure to save the results of these queries** as R objects first, and then **as local files**, for instance through:
+
+```{r,eval=FALSE}
+saveRDS(df_qtvar,"df_qtvar.RDS")
+saveRDS(df_qjm,"df_qjm.RDS")
+```
+
+The tables are then saved as R data structures which you can later read with:
+
+```{r,eval=FALSE}
+readRDS("df_qtvar.RDS")
+readRDS("df_qjm.RDS")
+```
+
+
