@@ -1,7 +1,7 @@
-#' collect_qtvar
+#' collect_qtvar from webpage
 #' @param res response page
 #' @return QTVAR data corresponding to page
-
+#' @importFrom rlang .data
 collect_qtvar <- function (res)  {
   pageToRead=httr::content(res,
                            "text",
@@ -13,12 +13,12 @@ collect_qtvar <- function (res)  {
   n=which(rvest::html_attr(tables,"summary")=="Débits à pas de temps variable")
   df=tables[n] %>%
     rvest::html_table() %>%
-    .[[1]] %>%
+    magrittr::extract2(1) %>%
     dplyr::as_tibble() %>%
-    dplyr::mutate(Time=lubridate::dmy_hm(Date),
-           Q=`Q (m3/s)`,
-           V=V,
-           C=C) %>%
-    dplyr::select(Time,Q)
+    dplyr::mutate(Time=lubridate::dmy_hm(.data$Date),
+           Q=.data$`Q (m3/s)`,
+           V=.data$V,
+           C=.data$C) %>%
+    dplyr::select(.data$Time,.data$Q)
   return(df)
 }
