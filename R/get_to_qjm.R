@@ -1,4 +1,4 @@
-#' get_to_qjm
+#' get_to_qjm webpage
 #' @description This function is used by bh_get_qjm() to get page of results for QJM
 #' @param res page
 #' @param year year for which data should be collected

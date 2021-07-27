@@ -1,4 +1,4 @@
-#' get_to_qtvar
+#' get_to_qtvar from webpage
 #' @description This function is used by bh_get_qtvar() to get page of results for QTVAR
 #' @param res page
 #' @param t1 starting time formatted as "\%j/\%M/\%Y \%h:\%m"

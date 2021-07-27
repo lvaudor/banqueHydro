@@ -1,4 +1,4 @@
-#' get_to_procedure
+#' get_to_procedure webpage (QTVAR or QJM)
 #' @param res page
 #' @param procedure procedure: import either "QTVAR" or "QJM"
 #' @param station gauging station code

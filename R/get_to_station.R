@@ -1,4 +1,4 @@
-#' get_to_station
+#' get_to_station from webpage
 #' @param station gauging station code
 #' @return page corresponding to station on banquehydro
 
