@@ -1,13 +1,17 @@
 Package: banqueHydro
 Type: Package
-Title: Collects data from the banque hydro website.
+Title: Collection of data data from the banque hydro website
 Version: 0.1.0
 Author: lise.vaudor@ens-lyon.fr, david.dorchies@irstea.fr, maxime.jay-allemand@irstea.fr
 Maintainer: Lise Vaudor <lise.vaudor@ens-lyon.fr>
 Description: This package uses the banque hydro website to collect discharge data from gauging stations throughout France.
     It uses scraping techniques to collect QJM and QTVAR data.
-Depends: httr, XML, xml2, dplyr, lubridate, rvest
 Encoding: UTF-8
 LazyData: true
 License: license LGPL-3.0 https://opensource.org/licenses/LGPL-3.0
 RoxygenNote: 7.1.1
+Imports: httr, XML, xml2, dplyr, lubridate, rvest, magrittr, rlang, purrr, tibble
+Suggests: 
+    rmarkdown,
+    knitr
+VignetteBuilder: knitr
